@@ -1,3 +1,0 @@
-/home/jamie/rtsptc2/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/jamie/rtsptc2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/jamie/rtsptc2/cmake-build-debug/CMakeFiles/testrtsp.dir
