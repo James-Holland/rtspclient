@@ -130,7 +130,6 @@ bool WaitForEos(GstElement *pipeline, GstBus *bus)
         case GST_MESSAGE_ASYNC_DONE:
         case GST_MESSAGE_NEW_CLOCK:
         case GST_MESSAGE_PROGRESS:
-            // LogDebug("Pipeline '%s' UnHandled message of type %s", GetName().c_str(), GST_MESSAGE_TYPE_NAME (msg));
             break;
         default:
             break;
@@ -139,21 +138,22 @@ bool WaitForEos(GstElement *pipeline, GstBus *bus)
     return false;
 }
 
+// A simple selection based on the global variable "count", as select_palette is called for each stream.
 gboolean select_palette(GstElement *rtspsrc, guint num,
                         GstCaps *caps, gpointer user_data)
 {
-    if (count == 2) {
-        return true;
+    int streamIndex = 2; // Selecting any stream other than the 1st one breaks, when TCP
+    bool selected = false;
+    if (count == streamIndex) {
+        printf("Selecting stream %d \n ", count);
+        selected = true;
     }
     count++;
-    return false;
+    return selected;
 }
 
 int main(int argc, char **argv) {
     bool callBackFlag = false;
-    int bflag = 0;
-    char *avalue = NULL;
-    int index;
     int c;
     std::string pipe;
 
