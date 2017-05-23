@@ -6,6 +6,9 @@ When TCP transport is set, via the protocols flag, it breaks if the select-strea
 
 If TCP transport is set and the select-stream callback isn't used, the stream is played completely fine. This can be seen in wireshark.
 
+The example rtsp-server provided by gstreamer is used as a control server for this demo. The number of streams was increased, as to show the stream selection error. You must use this forked server repo [https://github.com/James-Holland/gst-rtsp-server](https://github.com/James-Holland/gst-rtsp-server)
+
+
 #### Compiling
 ##### Test client
 ```sh  
