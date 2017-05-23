@@ -2,7 +2,7 @@
 
 There seems to be a bug in rtspsrc. There is a callback for the select-stream signal, through which one can select which stream they wish to SETUP/PLAY. (By returning true in the callback).
 
-When TCP transport is set, via the protocols flag, it breaks if the select-stream callback function is called.
+When TCP transport is set, via the protocols flag, it breaks if the select-stream callback function is called (and a stream of index greater than 1 is selected).
 
 If TCP transport is set and the select-stream callback isn't used, the stream is played completely fine. This can be seen in wireshark.
 
