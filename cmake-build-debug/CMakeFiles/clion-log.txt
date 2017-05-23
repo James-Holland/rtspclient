@@ -1,0 +1,11 @@
+/home/jamie/clion-2016.3.2/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/jamie/rtsptc2
+Glib found = 1
+Glib flags = -I/usr/include/glib-2.0;-I/usr/lib/x86_64-linux-gnu/glib-2.0/include
+Glib flags = -lglib-2.0
+-- Boost version: 1.61.0
+-- Found the following Boost libraries:
+--   system
+--   filesystem
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/jamie/rtsptc2/cmake-build-debug
